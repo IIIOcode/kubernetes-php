@@ -8,6 +8,7 @@ Simple deploy of apache and php on kubernetes
 # APPLY CONFIGURATION FILES TO KUBERNETES
 
 kubectl apply -f barto-deployment.yaml
+
 kubectl apply -f barto-service.yaml
 
 # VERIFY THE STATUS OF THE DEPLOY
