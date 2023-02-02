@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-php
+      app: hellophp
   template:
     metadata:
       labels:
-        app: hello-php
+        app: hellophp
     spec:
       containers:
       - name: php-container
