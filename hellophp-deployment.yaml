@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-php
+  template:
+    metadata:
+      labels:
+        app: hello-php
+    spec:
+      containers:
+      - name: php-container
+        image: php:7.4-apache
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: html-volume
+          mountPath: /var/www/html
+      volumes:
+      - name: html-volume
+        configMap:
+          name: html-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: html-config
+data:
+  index.php: |
+    <?php
+    echo "Hello, World!";
+    ?>
+
