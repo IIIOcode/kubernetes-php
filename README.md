@@ -1,25 +1,25 @@
 # kubernetes-php
 Simple deploy of apache and php on kubernetes
 
-# STEPS
+# Steps
 * Apply the configuration files to kubernetes
 * Verify the status of the deploy
 * Get the IP of the minikube node
 * Open the browser and connect to the port
 
-# APPLY CONFIGURATION FILES TO KUBERNETES
+# Apply the configuration to kubernetes
 
 $ kubectl apply -f barto-deployment.yaml
 
 $ kubectl apply -f barto-service.yaml
 
-# VERIFY THE STATUS OF THE DEPLOY
+# Verify the status of the deploy
 $ kubectl get pods
 
 $ kubectl get service
 
-# GET THE IP OF THE MINIKUBE NODE 
+# Get the ip of the node of minikube
 $ kubectl get nodes -o wide
 
-# OPEN THE BROWSER AND CONNECT 
+# Open the browser and connect 
 http://<node-ip>:<node-port>
