@@ -9,9 +9,9 @@ Simple deploy of apache and php on kubernetes
 
 # Apply the configuration to kubernetes
 
-$ kubectl apply -f barto-deployment.yaml
+$ kubectl apply -f hellophp-deployment.yaml
 
-$ kubectl apply -f barto-service.yaml
+$ kubectl apply -f hellophp-service.yaml
 
 # Verify the status of the deploy
 $ kubectl get pods
